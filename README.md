@@ -11,7 +11,7 @@ Instead of using SASS/LESS for templating I used CSS3 variables. See (src/assets
 
 All animations are created by using CSS3 transitions and Angular class data-binding.
 
-**If** SASS/LESS is a requirement I can create another version using this too.
+**If SASS/LESS is a requirement I can create another version using this too.**
 
 ## Angular CLI
 
