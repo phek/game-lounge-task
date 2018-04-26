@@ -1,7 +1,7 @@
 # Gamelounge
 
 This project was created as a code test for the company Game Lounge.
-You can read the task description in task_description.md.
+You can read the task description in [task_description.md](https://github.com/phek/game-lounge-task/blob/master/task_description.md).
 
 The application is created with only pure AngularJS, HTML and CSS3. No additional dependencies were added.
 
