@@ -17,6 +17,9 @@ View the website by installing [NPM](https://nodejs.org/en/) and then running th
 **npm install** *- To install dependencies such as Angular*  
 **npm start** *- To start the dev server, accessed through (http://localhost:4200)*
 
+You can also view it on Github-pages:  
+https://phek.github.io/game-lounge-task/
+
 ## Angular CLI
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
