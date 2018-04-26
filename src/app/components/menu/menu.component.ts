@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Menu} from '../../models/Menu';
+import {MenuItem} from '../../models/MenuItem';
 import {MenuService} from '../../api/menu.service';
 
 @Component({
@@ -9,12 +9,12 @@ import {MenuService} from '../../api/menu.service';
 })
 export class MenuComponent implements OnInit {
 
-  // Menu with null values. Allows us to compare selectedItem with other Menu items (Instead of having to check for null).
-  private none: Menu = new Menu();
+  // MenuItem with null values. Allows us to compare selectedItem with other MenuItems (Instead of having to check for null).
+  private none: MenuItem = new MenuItem();
 
   showMenu = false;
-  menu: Array<Menu> = [];
-  selectedItem: Menu = this.none;
+  menu: Array<MenuItem> = [];
+  selectedItem: MenuItem = this.none;
 
   constructor(private menuService: MenuService) {
   }

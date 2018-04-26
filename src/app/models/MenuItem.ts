@@ -1,18 +1,18 @@
-export class Menu {
+export class MenuItem {
   id: number;
   name: string;
   icon: string;
-  sub: Array<MenuItem>;
+  sub: Array<SubItem>;
 
   constructor(menu = null) {
     this.id = menu ? menu.id : null;
     this.name = menu ? menu.name : null;
     this.icon = menu ? menu.icon : null;
-    this.sub = menu ? menu.sub.map(subItem => new MenuItem(subItem)) : null;
+    this.sub = menu ? menu.sub.map(subItem => new SubItem(subItem)) : null;
   }
 }
 
-class MenuItem {
+class SubItem {
   id: number;
   name: string;
   href: string;
