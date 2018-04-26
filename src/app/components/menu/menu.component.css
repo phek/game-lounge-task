@@ -1,0 +1,209 @@
+/* MENU VARIABLES */
+.nav {
+  --top-nav-height: 80px;
+}
+
+.nav .sidebar {
+  --width: 280px;
+  --padding: 20px;
+  --distance-sidebar-first: calc((var(--width) + var(--padding) * 2) * -1);
+  --distance-sidebar-second: calc((var(--width) + var(--padding) * 2) + 5px);
+}
+
+
+/* HAMBURGER */
+.nav .hamburger {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav .hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-color);
+  margin: 6px 0;
+  transition: 0.4s;
+  display: block;
+}
+
+/* --Animation-- */
+.nav .hamburger.animate div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.nav .hamburger.animate div:nth-child(2) {
+  opacity: 0;
+}
+
+.nav .hamburger.animate div:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/* --Animation-- */
+
+
+/* TOP BAR */
+nav.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav .topbar p.selected {
+  text-decoration: underline !important;
+}
+
+.nav .topbar .wrapper {
+  display: table-row;
+  height: var(--top-nav-height);
+}
+
+.nav .topbar {
+  background-color: var(--primary-color);
+  font-size: 13px;
+  color: var(--light-color);
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nav .topbar .item {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+.nav .topbar span.spacer {
+  display: table-cell;
+  padding: 0 10px;
+}
+
+.nav .topbar p {
+  display: inline-block;
+}
+
+.nav .topbar a, .nav .topbar a:hover, .nav .topbar a:visited {
+  color: var(--light-color);
+}
+
+
+/* SIDE BAR */
+.nav .sidebar {
+  position: fixed;
+  font-size: 15px;
+  opacity: 0;
+  transition: 0.4s;
+  transition-property: transform, opacity;
+  width: var(--width);
+  transform: translate(var(--distance-sidebar-first));
+}
+
+/* --Animation-- */
+.nav .sidebar.show {
+  opacity: 1;
+  transform: translate(0);
+}
+/* --Animation-- */
+
+.nav .sidebar a {
+  display: table;
+  margin: 20px 0;
+}
+
+.nav .sidebar .first-menu a {
+  width: 100%;
+}
+
+.nav .sidebar a p {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nav .sidebar .first-menu {
+  position: relative;
+  width: 100%;
+  padding: var(--padding);
+  background-color: #fff;
+  height: calc(100vh - 80px - 40px);
+  z-index: 5;
+}
+
+.nav .sidebar .arrow-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav .sidebar .icon {
+  height: 20px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav .sidebar a, .nav .sidebar a:hover, .nav .sidebar a:visited {
+  color: var(--primary-color);
+}
+
+
+/* SIDE BAR - SUB MENU */
+.nav .sidebar .more-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px - 40px);
+  padding: var(--padding);
+  transform: translate(0);
+  background-color: #fff;
+  transition: 0.4s;
+  transition-property: transform, opacity;
+}
+
+/* --Animation-- */
+.nav .sidebar .more-menu.show {
+  transform: translate(var(--distance-sidebar-second));
+}
+/* --Animation-- */
+
+.nav .sidebar .more-menu .thumb {
+  height: 50px;
+  border-radius: 5px;
+}
+
+.nav .sidebar .more-menu .fake-thumb {
+  height: 50px;
+  width: 77px;
+}
+
+.nav .sidebar .more-menu h1 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+}
+
+
+/* GENERAL CSS */
+.clickable {
+  cursor: pointer;
+}
+
+.nav a, .nav a:hover, .nav a:visited {
+  text-decoration: none;
+}
+
+
+/* CSS ARROWS */
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #333;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #333;
+}

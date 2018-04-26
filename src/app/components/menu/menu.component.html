@@ -1,0 +1,40 @@
+<nav class="nav">
+  <div class="topbar">
+    <div class="wrapper">
+      <div class="hamburger clickable" [ngClass]="{'animate': showMenu}" (click)="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span class="spacer"></span>
+      <div class="item" *ngFor="let item of menu">
+        <a class="clickable" (click)="showSubMenu(item)">
+          <p [ngClass]="{'selected': item.id === selectedItem.id}">{{item.name}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav">
+  <div class="sidebar" [ngClass]="{'show': showMenu}">
+    <div class="first-menu">
+      <a class="clickable" (click)="showSubMenu(item)" *ngFor="let item of menu">
+        <img class="icon" src="assets/icons/{{item.icon}}">
+        <p *ngIf="item.id === selectedItem.id">Back</p>
+        <p *ngIf="item.id !== selectedItem.id">{{item.name}}</p>
+        <div class="arrow-wrapper">
+          <div
+            [ngClass]="{'arrow-right': item.id !== selectedItem.id, 'arrow-left': item.id === selectedItem.id}"></div>
+        </div>
+      </a>
+    </div>
+    <div class="more-menu" [ngClass]="{'show': selectedItem.id}">
+      <h1>{{selectedItem.name}}</h1>
+      <a href="{{item.href}}" *ngFor="let item of selectedItem.sub">
+        <img class="thumb" src="assets/thumbs/{{item.thumb}}" *ngIf="item.thumb">
+        <div class="fake-thumb" *ngIf="!item.thumb"></div>
+        <p>{{item.name}}</p>
+      </a>
+    </div>
+  </div>
+</div>
