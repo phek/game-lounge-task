@@ -30,7 +30,7 @@
     </div>
     <div class="more-menu" [ngClass]="{'show': selectedItem.id}">
       <h1>{{selectedItem.name}}</h1>
-      <a href="{{item.href}}" *ngFor="let item of selectedItem.sub">
+      <a routerLink="{{item.href}}" (click)="toggleMenu()" *ngFor="let item of selectedItem.sub">
         <img class="thumb" src="assets/thumbs/{{item.thumb}}" *ngIf="item.thumb">
         <div class="fake-thumb" *ngIf="!item.thumb"></div>
         <p>{{item.name}}</p>
