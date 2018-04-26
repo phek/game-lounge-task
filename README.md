@@ -5,13 +5,17 @@ You can read the task description in task_description.md.
 
 The application is created with only pure AngularJS, HTML and CSS3. No additional dependencies were added.
 
-Instead of using Bootstrap for icons such as the hamburger and arrows I created them myself with pure CSS3.
+Instead of using Bootstrap for icons such as the hamburger and arrows I created them myself with pure CSS3. I generally don't like using Bootstrap since I feel like it limiting my design process, I feel comfortable enough with normal CSS to create the same solutions in the same amount of time.
 
 Instead of using SASS/LESS for templating I used CSS3 variables. See (src/assets/css/variables/theme.css).
 
 All animations are created by using CSS3 transitions and Angular class data-binding.
 
 **If SASS/LESS is a requirement I can create another version using this too.**
+
+View the website by installing [NPM](https://nodejs.org/en/) and then running the following commands in a command-prompt of the project root:  
+**npm install** *- To install dependencies such as Angular*  
+**npm start** *- To start the dev server, accessed through (http://localhost:4200)*
 
 ## Angular CLI
 
